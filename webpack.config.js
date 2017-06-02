@@ -37,9 +37,10 @@ const CONFIG = {
 		chunkFilename: '[id].chunk.js'
 	},
 	resolve: {
-		extensions: ['.ts', '.js', '.json', '.scss'],
+		extensions: ['.ts', '.js', '.scss', '.json', '.csv'],
 		alias: {
 			dng: isDevBuild ? src('dng.ts') : root('dist/dng-viz.min.js'),
+			components: src('components')
 		},
 		plugins: [
 			new TsConfigPathsPlugin()

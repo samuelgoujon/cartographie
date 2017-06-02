@@ -1,11 +1,11 @@
 
 import * as OptionsBox from './options-box'
-import * as defaults from '../data/options'
+import * as defaults from '../default-options.json'
 
 import DNGViz from 'dng'
 import './demo.scss'
 
-var viz, vizContainer, optionsObjectRef
+var viz, container
 
 window.onload = function () {
 	var optionsContainer = document.getElementById('demo-options')
@@ -23,28 +23,9 @@ window.onresize = function () {
 }
 
 function initViz() {
-	vizContainer = document.querySelector('div#demo-target')
-	viz = new DNGViz(vizContainer, /* Optional -> */ optionsObjectRef)
+	container = document.querySelector('div#demo-target')
+	viz = new DNGViz(container)
 	viz.init()
-
-	// The HTML element holding the visualization will fire the 'selectionChange' event
-	// whenever a node is selected or deselected.
-	vizContainer.addEventListener('select', function () {
-		console.log('Event received on parent application: Data node selected')
-
-		var selection = viz.selection
-
-
-		if (selection) {
-			console.debug('Selected node:', selection.id)
-			if (selection.paths) {
-				console.debug('Selected node paths:', selection.paths)
-			}
-		} else {
-			console.debug('Selection cleared!')
-		}
-	})
-
 }
 
 function reloadViz() {

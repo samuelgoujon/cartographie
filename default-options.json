@@ -1,14 +1,18 @@
 {
+  "idPrefix": "dng",
+  "dataPath": "data/",
+
   "node": {
-    "radius": {
-      "min": 8,
-      "max": 64
-    },
-    "weigth": {
-      "scale": "log",
-      "defaults": {
-        "people": 1,
-        "organization": 1
+    "baseRadius": 8,
+    "maxDistance": 300,
+    "defaults": {
+      "people": {
+        "weigth": 1,
+        "charge": -10
+      },
+      "organization": {
+        "weigth": 3,
+        "charge": -300
       }
     }
   },
@@ -17,7 +21,7 @@
   },
 
   "links": {
-    "baseUrl": "http://wiki.damocles.co/wiki/",
+    "baseUrl": "http://wiki.damocles.co/wiki",
     "action": "new-tab"
   },
 

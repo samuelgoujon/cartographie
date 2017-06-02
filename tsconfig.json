@@ -8,7 +8,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "dng": ["src/dng.ts"]
+      "dng": ["src/dng.ts"],
+      "components": ["src/components"]
     },
     "types": [
       "node",
