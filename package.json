@@ -1,0 +1,12 @@
+{
+  "name": "dng",
+  "version": "0.1",
+  "description": "Network graph for Damocles",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snolflake/damocles-network-graph"
+  },
+  "author": "Carlos G. <snolflake@gmail.com>",
+  "license": "UNLICENSED"
+}
