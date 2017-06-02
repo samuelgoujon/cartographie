@@ -8,6 +8,8 @@ declare interface DNGVizAPI {
 declare interface Options {
 	idPrefix: string
 	dataPath: string
+	initialSelection: number
+	
 	node: {
 		baseRadius: number
 		maxDistance: number

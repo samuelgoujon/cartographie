@@ -65,7 +65,7 @@ if (isDevBuild) {
 	CONFIG.output.filename = '[name]-[hash].js'
 	CONFIG.output.chunkFilename = '[id].[hash].chunk.js'
 } else if (!isDemoBuild) {
-	CONFIG.output.entry = { demo: root('demo/demo.js')}
+	CONFIG.entry = { demo: root('demo/demo.js')}
 	CONFIG.output.filename = 'dng-viz.min.js'
 	CONFIG.output.library = 'DNGViz'
 	CONFIG.output.libraryTarget = 'umd'

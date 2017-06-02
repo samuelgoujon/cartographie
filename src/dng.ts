@@ -14,6 +14,7 @@ import { D3BaseSelection, D3Element, ComponentBase, Graph } from 'components'
 export default class DNGViz implements DNGVizAPI {
 	options: Options
 	data: DataProvider
+	selection: NodeDatum
 	
 	private host: D3BaseSelection
 	private svg: D3Element<SVGElement>
@@ -41,6 +42,7 @@ export default class DNGViz implements DNGVizAPI {
 		this.scene = svg
 			.append('rect')
 			.classed('scene', true)
+			.on('click', () => this.deselect(true))
 		
 		this.root = svg
 			.append('g')
@@ -57,7 +59,14 @@ export default class DNGViz implements DNGVizAPI {
 	}
 	
 	load() {
+		let initialSelection = this.data.nodes.filter(n => n.id === this.options.initialSelection)
+		if (initialSelection.length) {
+			this.select(initialSelection[0], false)
+		}
+		
 		this.components.forEach(c => c.load(this.data))
+		
+		
 		this.refresh()
 	}
 	
@@ -77,5 +86,30 @@ export default class DNGViz implements DNGVizAPI {
 	}
 	
 	destroy() {
+	}
+	
+	select(node: NodeDatum, refresh = true) {
+		this.deselect(false)
+		this.selection = node
+		this.selection['fx'] = 0
+		this.selection['fy'] = 0
+		
+		if (refresh) {
+			this.refresh()
+			this.graph.simulation.alpha(1).restart()
+		}
+	}
+	
+	deselect(refresh = true) {
+		if (this.selection) {
+			this.selection['fx'] = null
+			this.selection['fy'] = null
+			this.selection = null
+		}
+		
+		if (refresh) {
+			this.refresh()
+			this.graph.simulation.alpha(1).restart()
+		}
 	}
 }

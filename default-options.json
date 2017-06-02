@@ -1,6 +1,7 @@
 {
   "idPrefix": "dng",
   "dataPath": "data/",
+  "initialSelection": 140,
 
   "node": {
     "baseRadius": 8,
@@ -8,10 +9,10 @@
     "defaults": {
       "people": {
         "weigth": 2,
-        "charge": -60
+        "charge": -100
       },
       "organization": {
-        "weigth": 4,
+        "weigth": 3,
         "charge": -200
       }
     }

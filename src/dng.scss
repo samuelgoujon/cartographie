@@ -8,37 +8,55 @@
 
     .scene {
       fill: none;
+      pointer-events: all;
     }
 
     .node {
       fill: none;
 
+      &:hover, &.selected {
+        circle {
+          cursor: pointer;
+          fill: white !important;
+          stroke: currentColor;
+          stroke-width: 3px;
+        }
+      }
+
+      &.selected {
+        text {
+          font-size: 14px;
+        }
+      }
+
       circle {
-        cursor: pointer;
+        fill: currentColor;
+      }
+
+      text {
+        pointer-events: none !important;
+        text-anchor: middle;
+        font-size: 12px;
+        fill: currentColor;
       }
 
       &.node-people {
-        stroke: #5A5;
-        fill: #5A5;
-        stroke-width: 1px;
+        color: #5A5;
       }
 
       &.node-organization {
-        stroke: #B40;
-        fill: #B40;
-        stroke-width: 3px;
-      }
-
-      &:hover {
-        fill-opacity: .5;
+        color: #B40;
+        text {
+          font-weight: bold;
+        }
       }
     }
 
     .connection {
-      stroke-width: 2px;
+      stroke-width: 1.5px;
       stroke: #333;
       &.connection-dotted {
-        stroke-dasharray: 6 3;
+        stroke-dasharray: 5 3;
       }
     }
   }
