@@ -17,8 +17,8 @@ export class Graph extends ComponentBase {
 		let collision = D3.forceCollide()
 		let center = D3.forceCenter(0, 0)
 		
-		let gravityX = D3.forceX(0).strength(0.05)
-		let gravityY = D3.forceY(0).strength(0.05)
+		let gravityX = D3.forceX(0).strength(0.04)
+		let gravityY = D3.forceY(0).strength(0.08)
 		
 		link.id(this.getId)
 		link.distance(64 * 1.5)
@@ -29,6 +29,7 @@ export class Graph extends ComponentBase {
 		collision.radius(this.getRadius)
 		
 		simulation
+			.alphaDecay(1 - Math.pow(0.001, 1 / 1000))
 			.force('link', link)
 			.force('charge', charge)
 			.force('collision', collision)
