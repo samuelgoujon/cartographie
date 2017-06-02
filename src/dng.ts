@@ -69,7 +69,8 @@ export default class DNGViz implements DNGVizAPI {
 			.attr('width', rect.width)
 			.attr('height', rect.height)
 		
-		// this.root.attr('transform', `translate(${(rect.width / 2)}, ${rect.height / 2})`)
+		this.root
+			.attr('transform', `translate(${(rect.width / 2)}, ${rect.height / 2})`)
 		
 		ComponentBase.resizeShared(rect)
 		this.components.forEach(c => c.resize(rect, animated))

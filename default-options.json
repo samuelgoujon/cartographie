@@ -4,14 +4,14 @@
 
   "node": {
     "baseRadius": 8,
-    "maxDistance": 300,
+    "maxDistance": 500,
     "defaults": {
       "people": {
-        "weigth": 1,
-        "charge": -10
+        "weigth": 2,
+        "charge": -60
       },
       "organization": {
-        "weigth": 3,
+        "weigth": 4,
         "charge": -300
       }
     }

@@ -13,28 +13,33 @@
     .node {
       fill: none;
 
+      circle {
+        cursor: pointer;
+      }
+
       &.node-people {
-        stroke: #6F6;
-        fill: #6F6;
-        fill-opacity: .3;
+        stroke: #5A5;
+        fill: #5A5;
         stroke-width: 1px;
       }
 
       &.node-organization {
-        stroke: #F66;
-        fill: #F66;
-        fill-opacity: .3;
+        stroke: #B40;
+        fill: #B40;
         stroke-width: 3px;
       }
 
       &:hover {
-        fill-opacity: 1 !important;
+        fill-opacity: .5;
       }
     }
 
     .connection {
       stroke-width: 2px;
       stroke: #333;
+      &.connection-dotted {
+        stroke-dasharray: 6 3;
+      }
     }
   }
 }

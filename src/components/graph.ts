@@ -14,16 +14,27 @@ export class Graph extends ComponentBase {
 		let simulation = this.simulation = D3.forceSimulation<NodeDatum, ConnectionDatum>()
 		let link = this.link = D3.forceLink<NodeDatum, ConnectionDatum>()
 		let charge = D3.forceManyBody()
+		let collision = D3.forceCollide()
 		let center = D3.forceCenter(0, 0)
 		
+		let gravityX = D3.forceX(0).strength(0.05)
+		let gravityY = D3.forceY(0).strength(0.05)
+		
 		link.id(this.getId)
+		link.distance(64 * 1.5)
+		
 		charge.strength((d: NodeDatum) => opt.defaults[d.type].charge)
-		charge.distanceMax(opt.maxDistance)
+		// charge.distanceMax(opt.maxDistance)
+		
+		collision.radius(this.getRadius)
 		
 		simulation
 			.force('link', link)
 			.force('charge', charge)
+			.force('collision', collision)
 			.force('center', center)
+			.force('gravityX', gravityX)
+			.force('gravityY', gravityY)
 	}
 	
 	onLoad(data: DataProvider) {
@@ -50,7 +61,7 @@ export class Graph extends ComponentBase {
 			.append('circle')
 			.attr('cx', 0)
 			.attr('cy', 0)
-			.attr('r', d => d.weigth * opt.node.baseRadius)
+			.attr('r', d => this.getRadius(d))
 		
 		this.nodes
 			.append('title')
@@ -68,21 +79,25 @@ export class Graph extends ComponentBase {
 	}
 	
 	onRefresh(rect: ClientRect) {
-		let { width, height } = rect
-		this.simulation.force('center', D3.forceCenter(width / 2, height / 2))
-		this.simulation.restart()
+		// let { width, height } = rect
+		// this.simulation.force('center', D3.forceCenter(width / 2, height / 2))
+		this.simulation.alpha(0.3).restart()
+		
 	}
 	
 	private onTick = () => {
 		let { max, min } = Math
 		let { width, height } = this.rect
 		
-		// TODO: check type
+		// TODO: review
+		let w = width / 2
+		let h = height / 2
 		let margin = 8 * 4
+		
 		this.nodes
 			.attr('transform', (d: any) => {
-				d.x = max(margin, min(d.x, width - margin))
-				d.y = max(margin, min(d.y, height - margin))
+				d.x = max(margin - w, min(d.x, w - margin))
+				d.y = max(margin - h, min(d.y, h - margin))
 				return `translate(${d.x}, ${d.y})`
 			})
 		
@@ -93,8 +108,9 @@ export class Graph extends ComponentBase {
 			.attr('y2', (d: any) => d.target.y)
 	}
 	
-	private getRadius(node: NodeDatum, index: number, data: NodeDatum[]) {
-	
+	private getRadius = (node: NodeDatum, index?: number, data?: NodeDatum[]) => {
+		let base = this.viz.options.node.baseRadius
+		return base * node.weigth
 	}
 	
 	private getId(node: NodeDatum, index: number, data: NodeDatum[]) {
