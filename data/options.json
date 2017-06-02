@@ -1,0 +1,45 @@
+{
+  "node": {
+    "radius": {
+      "min": 8,
+      "max": 64
+    },
+    "weigth": {
+      "scale": "log",
+      "defaults": {
+        "people": 1,
+        "organization": 1
+      }
+    }
+  },
+
+  "connection": {
+  },
+
+  "links": {
+    "baseUrl": "http://wiki.damocles.co/wiki/",
+    "action": "new-tab"
+  },
+
+  "styles": {
+    "node": {
+      "people": {
+        "fill": "#F00",
+        "stroke-width": "1"
+      },
+      "organization": {
+        "fill": "#F0F",
+        "stroke-width": "2"
+      }
+    },
+    "connection": {
+      "solid": {
+        "stroke-width": "2"
+      },
+      "dotted": {
+        "stroke-width": "1",
+        "stroke-dasharray": "3 6"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "dng": ["src/dng.ts"]
+    },
+    "types": [
+      "node",
+      "dat-gui"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./definitions"
+    ]
+  }
+}
