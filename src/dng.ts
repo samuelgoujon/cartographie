@@ -1,5 +1,7 @@
-import * as d3 from 'd3'
+import * as D3 from 'd3'
+
 import * as assign from 'deep-assign'
+import 'classlist.js'
 
 const DEFAULT_OPTIONS: Options = require('../default-options.json')
 
@@ -14,7 +16,10 @@ import { D3BaseSelection, D3Element, ComponentBase, Graph } from 'components'
 export default class DNGViz implements DNGVizAPI {
 	options: Options
 	data: DataProvider
+	
 	selection: NodeDatum
+	zoom: D3.ZoomBehavior<any, any>
+	transform: D3.ZoomTransform
 	
 	private host: D3BaseSelection
 	private svg: D3Element<SVGElement>
@@ -27,7 +32,7 @@ export default class DNGViz implements DNGVizAPI {
 	private lastRect: ClientRect
 	
 	constructor(public hostEl: SVGGElement, options: Options) {
-		this.host = d3
+		this.host = D3
 			.select(hostEl)
 			.classed('dng-viz', true)
 		
@@ -59,14 +64,16 @@ export default class DNGViz implements DNGVizAPI {
 	}
 	
 	load() {
-		let initialSelection = this.data.nodes.filter(n => n.id === this.options.initialSelection)
-		if (initialSelection.length) {
-			this.select(initialSelection[0], false)
+		if (this.options.initialSelection) {
+			let initialSelection = this.data.nodes.filter(n => n.id === this.options.initialSelection)
+			if (initialSelection.length) {
+				this.select(initialSelection[0], false)
+			}
 		}
 		
+		this.initZoom()
+		
 		this.components.forEach(c => c.load(this.data))
-		
-		
 		this.refresh()
 	}
 	
@@ -78,8 +85,7 @@ export default class DNGViz implements DNGVizAPI {
 			.attr('width', rect.width)
 			.attr('height', rect.height)
 		
-		this.root
-			.attr('transform', `translate(${(rect.width / 2)}, ${rect.height / 2})`)
+		// TODO: if resize, substract the center offset delta from the current transform
 		
 		ComponentBase.resizeShared(rect)
 		this.components.forEach(c => c.resize(rect, animated))
@@ -91,25 +97,74 @@ export default class DNGViz implements DNGVizAPI {
 	select(node: NodeDatum, refresh = true) {
 		this.deselect(false)
 		this.selection = node
-		this.selection['fx'] = 0
-		this.selection['fy'] = 0
+		
+		this.selection.ref.classList.add('selected')
+		
+		// FIXME
+		// let { x, y, k } = this.transform
+		// this.selection['fx'] = x / k
+		// this.selection['fy'] = y / k
 		
 		if (refresh) {
 			this.refresh()
 			this.graph.simulation.alpha(1).restart()
 		}
+		
+		// this.centerCameraOnSelection(null)
 	}
 	
 	deselect(refresh = true) {
 		if (this.selection) {
+			this.selection.ref.classList.remove('selected')
+			
 			this.selection['fx'] = null
 			this.selection['fy'] = null
 			this.selection = null
+			
+			if (refresh) {
+				this.refresh()
+				this.graph.simulation.alpha(1).restart()
+			}
+		}
+	}
+	
+	private initZoom() {
+		let viz = this
+		
+		let zoomed = function () {
+			viz.transform = D3.event.transform
+			
+			// TODO: typings should recognize toString() implementation?
+			viz.root.attr('transform', viz.transform as any)
+			
+			viz.refresh(false)
+			console.info('zoomed')
 		}
 		
-		if (refresh) {
-			this.refresh()
-			this.graph.simulation.alpha(1).restart()
+		viz.transform = D3.zoomIdentity
+		viz.zoom = D3.zoom()
+			.scaleExtent([1 / 4, 8]) // TODO: parameters in %, e.g: from .25 to 4
+			.on('zoom', zoomed)
+		
+		this.scene.call(viz.zoom as any)
+	}
+	
+	// TODO
+	private centerCameraOnSelection(position: PositionXY) {
+		if (this.selection) {
+			let { x, y } = this.selection
+			let transition = this.root
+				.transition()
+				.duration(1800)
+				.delay(600)
+				.ease(D3.easeBackOut)
+			
+			let transform = D3.zoomIdentity
+			transform.scale(this.transform.k)
+			transform.translate(x, y)
+			
+			this.zoom.transform(transition, transform)
 		}
+		
 	}
 }

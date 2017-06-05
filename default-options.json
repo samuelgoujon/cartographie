@@ -1,19 +1,18 @@
 {
   "idPrefix": "dng",
   "dataPath": "data/",
-  "initialSelection": 140,
 
   "node": {
     "baseRadius": 8,
-    "maxDistance": 500,
+    "maxDistance": 400,
     "defaults": {
       "people": {
-        "weigth": 2,
-        "charge": -100
+        "weigth": 1,
+        "charge": -200
       },
       "organization": {
-        "weigth": 3,
-        "charge": -200
+        "weigth": 2,
+        "charge": -300
       }
     }
   },

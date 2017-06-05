@@ -1,8 +1,12 @@
 import * as D3 from 'd3'
+
 import { ComponentBase, D3Selection } from 'components'
 import { DataProvider } from 'dng'
+import { updateStyle } from '../utils/css'
 
 export class Graph extends ComponentBase {
+	wrapper = 'g#graph'
+	
 	simulation: D3.Simulation<NodeDatum, ConnectionDatum>
 	link: D3.ForceLink<NodeDatum, ConnectionDatum>
 	connections: D3Selection<ConnectionDatum>
@@ -23,7 +27,7 @@ export class Graph extends ComponentBase {
 		let gravityY = D3.forceY(0).strength(0.08)
 		
 		link.id(this.getId)
-		link.distance(64 * 1.5)
+		// link.distance(64 * 1.25)
 		
 		this.addRefresher(() => {
 			charge.strength((d: NodeDatum) => {
@@ -36,12 +40,11 @@ export class Graph extends ComponentBase {
 				return charge
 			})
 		})
-		// charge.distanceMax(opt.maxDistance)
 		
 		collision.radius(this.getRadius)
 		
 		simulation
-			.alphaDecay(1 - Math.pow(0.001, 1 / 2000))
+			.alphaDecay(1 - Math.pow(0.001, 1 / 200))
 			.force('link', link)
 			.force('charge', charge)
 			.force('collision', collision)
@@ -77,6 +80,7 @@ export class Graph extends ComponentBase {
 		
 		this.labels = this.nodes
 			.append('text')
+			.classed('label', true)
 			.text(d => d.name)
 		
 		this.nodes
@@ -92,35 +96,57 @@ export class Graph extends ComponentBase {
 		
 		this.link
 			.links(data.connections)
+		
+		{ // Store DOM element references for convinience
+			this.connections.each(function (this: SVGLineElement, connection: ConnectionDatum) {
+				connection.ref = this
+			})
+			
+			this.nodes.each(function (this: SVGGElement, node: NodeDatum) {
+				node.ref = this
+			})
+		}
 	}
 	
-	onRefresh(rect: ClientRect) {
-		// let { width, height } = rect
-		// this.simulation.force('center', D3.forceCenter(width / 2, height / 2))
-		this.simulation.alpha(0.3).restart()
+	onRefresh(rect: ClientRect, animated: boolean) {
+		let hasSelection = !!this.viz.selection
+		let k = this.viz.transform.k
+		let fontSize = 12 / k
 		
-		this.labels.attr('dy', d => this.getRadius(d) + 16)
-		this.nodes.classed('selected', (d) => this.viz.selection && this.viz.selection.id === d.id)
+		this.labels.attr('dy', d => this.getRadius(d) + (fontSize * 1.5))
+		this.circles.attr('r', d => this.getRadius(d))
+		
+		let rules: StyleRules = {}
+		
+		rules['.node:hover'] = rules['.node.selected'] = {
+			'circle': {
+				'stroke-width': 3 / k
+			}
+		}
+		
+		rules['.connection'] = {
+			'stroke-width': 1 / k,
+			'opacity': hasSelection ? '0.2' : '0.8'
+		}
+		
+		rules['.connection.focus'] = {
+			'stroke-width': 1 / k,
+			'opacity': hasSelection ? '0.2' : '0.8'
+		}
+		
+		rules['.label'] = {
+			'font-size': fontSize + 'px'
+		}
+		
+		updateStyle('#' + this.id, rules, 'graph')
+		
+		if (animated) {
+			this.simulation.alpha(0.3).restart()
+		}
 	}
 	
 	private onTick = () => {
-		let { max, min } = Math
-		let { width, height } = this.rect
-		
-		// TODO: review
-		let w = width / 2
-		let h = height / 2
-		let margin = 8 * 4
-		
-		this.nodes
-			.attr('transform', (d: any) => {
-				d.x = max(margin - w, min(d.x, w - margin))
-				d.y = max(margin - h, min(d.y, h - (margin * 2)))
-				return `translate(${d.x}, ${d.y})`
-			})
-		
-		this.circles
-			.attr('r', d => this.getRadius(d))
+		this.nodes.attr('transform', d => `translate(${d.x}, ${d.y})`)
 		
 		this.connections
 			.attr('x1', (d: any) => d.source.x)
@@ -130,6 +156,7 @@ export class Graph extends ComponentBase {
 	}
 	
 	private getRadius = (node: NodeDatum, index?: number, data?: NodeDatum[]) => {
+		let k = this.viz.transform.k
 		let base = this.viz.options.node.baseRadius
 		let radius = base * node.weigth
 		
@@ -137,7 +164,7 @@ export class Graph extends ComponentBase {
 			radius *= 3
 		}
 		
-		return radius
+		return radius / k
 	}
 	
 	private getId(node: NodeDatum, index: number, data: NodeDatum[]) {
@@ -162,6 +189,7 @@ export class Graph extends ComponentBase {
 	}
 	
 	private onClick = (d) => {
+		console.log(this.viz.transform)
 		if (this.viz.selection && this.viz.selection.id === d.id) {
 			window.open(d.url, '_blank')
 		} else {

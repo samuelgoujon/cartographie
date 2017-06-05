@@ -19,13 +19,6 @@
           cursor: pointer;
           fill: white !important;
           stroke: currentColor;
-          stroke-width: 3px;
-        }
-      }
-
-      &.selected {
-        text {
-          font-size: 14px;
         }
       }
 
@@ -36,7 +29,6 @@
       text {
         pointer-events: none !important;
         text-anchor: middle;
-        font-size: 12px;
         fill: currentColor;
       }
 
@@ -53,7 +45,6 @@
     }
 
     .connection {
-      stroke-width: 1.5px;
       stroke: #333;
       &.connection-dotted {
         stroke-dasharray: 5 3;

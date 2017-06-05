@@ -8,8 +8,9 @@ export class DataProvider {
 	
 	constructor(private app: DNGVizAPI) {
 		let opt = app.options
-		D3.csv(`${opt.dataPath}/nodes.csv`, this.parseNodes)
-		D3.csv(`${opt.dataPath}/connections.csv`, this.parseConnections)
+		let salt = Math.floor(Math.random() * 100000)
+		D3.csv(`${opt.dataPath}/nodes.csv?v${salt}`, this.parseNodes)
+		D3.csv(`${opt.dataPath}/connections.csv?v${salt}`, this.parseConnections)
 	}
 	
 	private parseNodes = (error: any, rows: DsvRows) => {
