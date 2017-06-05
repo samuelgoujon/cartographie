@@ -9,11 +9,12 @@ declare interface NodeDatum {
 	fx?: number
 	fy?: number
 	ref?: SVGGElement
+	connections?: ConnectionDatum[]
 }
 
 declare interface ConnectionDatum {
-	source: number
-	target: number
+	source: NodeDatum
+	target: NodeDatum
 	type: ConnectionType
 	ref?: SVGLineElement
 }

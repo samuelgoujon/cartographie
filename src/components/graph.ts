@@ -31,13 +31,14 @@ export class Graph extends ComponentBase {
 		
 		this.addRefresher(() => {
 			charge.strength((d: NodeDatum) => {
+				let k = this.viz.transform.k
 				let charge = opt.defaults[d.type].charge
 				
 				if (this.viz.selection && this.viz.selection.id === d.id) {
 					charge *= 20
 				}
 				
-				return charge
+				return charge / k
 			})
 		})
 		
@@ -68,6 +69,8 @@ export class Graph extends ComponentBase {
 			.attr('class', c => `connection connection-${c.type}`)
 		
 		this.nodes = this.root
+			.append('g')
+			.classed('nodes', true)
 			.selectAll('.node')
 			.data(data.nodes)
 			.enter().append('g')
@@ -129,12 +132,13 @@ export class Graph extends ComponentBase {
 			'opacity': hasSelection ? '0.2' : '0.8'
 		}
 		
-		rules['.connection.focus'] = {
-			'stroke-width': 1 / k,
-			'opacity': hasSelection ? '0.2' : '0.8'
+		rules['.connection.related'] = {
+			'opacity': '1 !important',
+			'stroke-width': 2 / k,
 		}
 		
 		rules['.label'] = {
+			'display': k >= 1 ? 'unset' : 'none',
 			'font-size': fontSize + 'px'
 		}
 		
@@ -188,8 +192,7 @@ export class Graph extends ComponentBase {
 		d.fy = null;
 	}
 	
-	private onClick = (d) => {
-		console.log(this.viz.transform)
+	private onClick = (d: NodeDatum) => {
 		if (this.viz.selection && this.viz.selection.id === d.id) {
 			window.open(d.url, '_blank')
 		} else {

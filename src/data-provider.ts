@@ -13,6 +13,25 @@ export class DataProvider {
 		D3.csv(`${opt.dataPath}/connections.csv?v${salt}`, this.parseConnections)
 	}
 	
+	getRelated(node: NodeDatum, recurse = true) {
+		let related: ConnectionDatum[] = []
+		
+		for (let connection of this.connections) {
+			if (connection.source.id === node.id || connection.target.id === node.id) {
+				let child = connection.source.id === node.id ? connection.target : connection.source
+				
+				if (recurse) { // Recurse only once
+					let branch = this.getRelated(child, false)
+					related.push(...branch)
+				}
+				
+				related.push(connection)
+			}
+		}
+		
+		return related
+	}
+	
 	private parseNodes = (error: any, rows: DsvRows) => {
 		this.nodes = []
 		
@@ -57,8 +76,8 @@ export class DataProvider {
 				throw `Field "type" missing on connection`
 			}
 			
-			connection.source = +connection.source
-			connection.target = +connection.target
+			connection.source = +connection.source as any // TODO raw format for connection
+			connection.target = +connection.target as any // TODO raw format for connection
 			
 			this.connections.push(connection)
 		}

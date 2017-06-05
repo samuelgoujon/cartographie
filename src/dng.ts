@@ -75,6 +75,9 @@ export default class DNGViz implements DNGVizAPI {
 		
 		this.components.forEach(c => c.load(this.data))
 		this.refresh()
+		
+		let { width, height } = this.lastRect
+		this.zoom.translateBy(this.scene, width / 2, height / 2)
 	}
 	
 	refresh(animated = false, reload = false) {
@@ -100,6 +103,16 @@ export default class DNGViz implements DNGVizAPI {
 		
 		this.selection.ref.classList.add('selected')
 		
+		if (!this.selection.connections) {
+			this.selection.connections = this.data.getRelated(this.selection)
+		}
+		
+		this.selection.connections.forEach(c => {
+			c.source.ref.classList.add('related')
+			c.target.ref.classList.add('related')
+			c.ref.classList.add('related')
+		})
+		
 		// FIXME
 		// let { x, y, k } = this.transform
 		// this.selection['fx'] = x / k
@@ -116,6 +129,11 @@ export default class DNGViz implements DNGVizAPI {
 	deselect(refresh = true) {
 		if (this.selection) {
 			this.selection.ref.classList.remove('selected')
+			this.selection.connections.forEach(c => {
+				c.source.ref.classList.remove('related')
+				c.target.ref.classList.remove('related')
+				c.ref.classList.remove('related')
+			})
 			
 			this.selection['fx'] = null
 			this.selection['fy'] = null
@@ -132,13 +150,14 @@ export default class DNGViz implements DNGVizAPI {
 		let viz = this
 		
 		let zoomed = function () {
+			let tickSimulation = viz.transform.k !== D3.event.transform.k
 			viz.transform = D3.event.transform
 			
 			// TODO: typings should recognize toString() implementation?
 			viz.root.attr('transform', viz.transform as any)
 			
-			viz.refresh(false)
-			console.info('zoomed')
+			// TODO: Debounce animated refresh to update charges only when zoom change stops
+			viz.refresh(tickSimulation)
 		}
 		
 		viz.transform = D3.zoomIdentity

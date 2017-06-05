@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
 
-  svg {
+  & > svg {
     width: 100%;
     height: 100%;
 
@@ -11,41 +11,64 @@
       pointer-events: all;
     }
 
-    .node {
-      fill: none;
+    .nodes {
+      .node {
+        fill: none;
 
-      &:hover, &.selected {
-        circle {
-          cursor: pointer;
-          fill: white !important;
-          stroke: currentColor;
+        &:hover, &.selected {
+          circle {
+            cursor: pointer;
+            fill: white !important;
+            stroke: currentColor;
+          }
+
+          .label {
+            display: unset !important;
+            font-weight: bolder;
+          }
         }
-      }
 
-      circle {
-        fill: currentColor;
-      }
+        &.related {
+          .label {
+            font-weight: bold;
+          }
+        }
 
-      text {
-        pointer-events: none !important;
-        text-anchor: middle;
-        fill: currentColor;
-      }
+        &.related, &.selected, &:hover {
+          .label {
+            text-shadow: -1px -1px 1px white,
+            1px 1px 1px white,
+            -1px 1px 1px white,
+            1px -1px 1px white;
+          }
+        }
 
-      &.node-people {
-        color: #5A5;
-      }
+        circle {
+          fill: currentColor;
+        }
 
-      &.node-organization {
-        color: #B40;
         text {
-          font-weight: bold;
+          pointer-events: none !important;
+          text-anchor: middle;
+          fill: currentColor;
+        }
+
+        &.node-people {
+          color: #55AA55;
+        }
+
+        &.node-organization {
+          color: #BB4400;
+          text {
+            font-weight: bold;
+          }
         }
       }
     }
 
     .connection {
-      stroke: #333;
+      pointer-events: none !important;
+      stroke: #333333;
       &.connection-dotted {
         stroke-dasharray: 5 3;
       }

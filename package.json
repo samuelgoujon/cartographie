@@ -15,8 +15,8 @@
     "start": "npm run server-dashboard -- --hot",
     "server": "webpack-dev-server --inline --public dng:8080",
     "server-dashboard": "webpack-dashboard -- webpack-dev-server --inline --public dng:8080",
-    "build": "rimraf dist/* && webpack --progress --profile --bail",
-    "build-demo": "npm run build; rimraf demo/dist && webpack --progress --profile --bail"
+    "build": "npm run build-dist; rimraf demo/dist && webpack --progress --profile --bail",
+    "build-dist": "rimraf dist/* && webpack --progress --profile --bail"
   },
   "dependencies": {
     "d3": "^4.5.0",

@@ -16,7 +16,7 @@ const NPM_TASK = process.env.npm_lifecycle_event
 const isDevBuild = NPM_TASK.indexOf('build') === -1
 
 // Flags if the visualization demo is being build
-const isDemoBuild = NPM_TASK !== 'build'
+const isDemoBuild = NPM_TASK === 'build'
 
 function root(args) {
 	args = Array.prototype.slice.call(arguments, 0)
