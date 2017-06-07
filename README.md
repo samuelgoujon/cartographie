@@ -1,4 +1,4 @@
-## D3 Network Graph
+## D3 Network Graph - Damocles
 
 ### Instalation
 In this branch of the repo you can find the [minified file](https://github.com/snolflake/damocles-network-graph/blob/gh-pages/dng-viz.min.js)
@@ -6,16 +6,17 @@ ready to be included on your on page.
 
 ### Usage
 Once the minified file is included a `DNGViz` variable containing the component constructor should be available and can be used as follows:
+
 ```
 var viz;
 
 function init() {
 	var container = document.querySelector('div#viz-target');
 	var options = {
-		dataPath: 'data/',
-    "links": {
-      "baseUrl": "http://wiki.damocles.co/wiki"
-    },
+		dataPath: "path/to/data/folder",
+		links: {
+			baseUrl: "http://wiki.damocles.co/wiki"
+		}
 	};
 
 	viz = new DNGViz(container, options);
