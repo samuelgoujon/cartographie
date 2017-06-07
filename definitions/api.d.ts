@@ -6,11 +6,11 @@ declare interface DNGVizAPI {
 }
 
 declare interface Options {
-	idPrefix: string
-	dataPath: string
-	initialSelection: number
+	idPrefix?: string
+	dataPath?: string
+	initialSelection?: number
 	
-	node: {
+	node?: {
 		baseRadius: number
 		maxDistance: number
 		defaults: {
@@ -20,7 +20,8 @@ declare interface Options {
 			}
 		}
 	}
-	links: {
+	
+	links?: {
 		baseUrl: string
 	}
 }

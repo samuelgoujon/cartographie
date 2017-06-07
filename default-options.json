@@ -17,12 +17,8 @@
     }
   },
 
-  "connection": {
-  },
-
   "links": {
-    "baseUrl": "http://wiki.damocles.co/wiki",
-    "action": "new-tab"
+    "baseUrl": "http://wiki.damocles.co/wiki"
   },
 
   "styles": {

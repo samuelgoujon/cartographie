@@ -12,22 +12,18 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run server-dashboard -- --hot",
-    "server": "webpack-dev-server --inline --public dng:8080",
-    "server-dashboard": "webpack-dashboard -- webpack-dev-server --inline --public dng:8080",
-    "build": "npm run build-dist; rimraf demo/dist && webpack --progress --profile --bail",
-    "build-dist": "rimraf dist/* && webpack --progress --profile --bail"
+    "start": "webpack-dashboard -- webpack-dev-server --inline --public dng:8080 --hot",
+    "deploy": "npm run build; rimraf demo/dist && webpack --progress --bail",
+    "build": "rimraf dist/* && webpack --progress --profile --bail"
   },
   "dependencies": {
     "d3": "^4.5.0",
-    "dat.gui": "^0.6.1",
     "node-sass": "^4.0.0",
     "typescript": "^2.2.1",
     "webpack": "^2.1.0-beta.28"
   },
   "devDependencies": {
     "@types/d3": "^4.4.1",
-    "@types/dat-gui": "^0.6.1",
     "@types/node": "^0.0.2",
     "@types/webpack": "^2.x",
     "awesome-typescript-loader": "^3.0.0-beta.17",
@@ -35,6 +31,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "d3-dsv": "^1.0.3",
+    "debounce": "^1.0.2",
     "deep-assign": "^2.0.0",
     "equals": "^1.0.5",
     "glob": "^7.1.1",

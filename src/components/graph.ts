@@ -31,14 +31,14 @@ export class Graph extends ComponentBase {
 		
 		this.addRefresher(() => {
 			charge.strength((d: NodeDatum) => {
-				let k = this.viz.transform.k
+				// let k = this.viz.transform.k
 				let charge = opt.defaults[d.type].charge
 				
 				if (this.viz.selection && this.viz.selection.id === d.id) {
 					charge *= 20
 				}
 				
-				return charge / k
+				return charge // Math.sqrt(k)
 			})
 		})
 		

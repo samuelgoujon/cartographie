@@ -1,43 +1,23 @@
+import './demo.scss';
 
-import * as OptionsBox from './options-box'
-import * as defaults from '../default-options.json'
+var viz;
 
-import DNGViz from 'dng'
-import './demo.scss'
+function init() {
+	var container = document.querySelector('div#demo-target');
+	var options = {
+		dataPath: 'data/'
+	};
 
-var viz, container
+	viz = new DNGViz(container, options);
 
-window.onload = function () {
-	var optionsContainer = document.getElementById('demo-options')
-
-	var optionsBox = OptionsBox.init(defaults, reloadViz, refreshViz)
-	optionsContainer.appendChild(optionsBox)
-
-	initViz()
+	viz.init();
 }
 
-window.onresize = function () {
+function refresh() {
 	if (viz) {
-		viz.refresh()
+		viz.refresh(true);
 	}
 }
 
-function initViz() {
-	container = document.querySelector('div#demo-target')
-	viz = new DNGViz(container)
-	viz.init()
-}
-
-function reloadViz() {
-	if (viz) {
-		viz.destroy()
-	}
-
-	initViz()
-}
-
-function refreshViz() {
-	if (viz) {
-		viz.refresh(true, true)
-	}
-}
+window.onload = init
+window.onresize = refresh

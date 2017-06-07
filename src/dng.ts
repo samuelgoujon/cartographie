@@ -1,6 +1,8 @@
 import * as D3 from 'd3'
 
 import * as assign from 'deep-assign'
+import * as debounce from 'debounce'
+
 import 'classlist.js'
 
 const DEFAULT_OPTIONS: Options = require('../default-options.json')
@@ -11,7 +13,6 @@ import { DataProvider } from './data-provider'
 export * from './data-provider'
 
 import { D3BaseSelection, D3Element, ComponentBase, Graph } from 'components'
-
 
 export default class DNGViz implements DNGVizAPI {
 	options: Options
@@ -80,7 +81,7 @@ export default class DNGViz implements DNGVizAPI {
 		this.zoom.translateBy(this.scene, width / 2, height / 2)
 	}
 	
-	refresh(animated = false, reload = false) {
+	refresh = (animated = false, reload = false) => {
 		let svgEl = this.svg.node() as SVGElement
 		let rect = this.lastRect = svgEl.getBoundingClientRect()
 		
@@ -92,9 +93,6 @@ export default class DNGViz implements DNGVizAPI {
 		
 		ComponentBase.resizeShared(rect)
 		this.components.forEach(c => c.resize(rect, animated))
-	}
-	
-	destroy() {
 	}
 	
 	select(node: NodeDatum, refresh = true) {
@@ -148,16 +146,19 @@ export default class DNGViz implements DNGVizAPI {
 	
 	private initZoom() {
 		let viz = this
+		let refreshCharges = debounce(() => viz.refresh(true), 1500)
 		
 		let zoomed = function () {
-			let tickSimulation = viz.transform.k !== D3.event.transform.k
+			let scaleChanged = viz.transform.k !== D3.event.transform.k
 			viz.transform = D3.event.transform
 			
 			// TODO: typings should recognize toString() implementation?
 			viz.root.attr('transform', viz.transform as any)
 			
-			// TODO: Debounce animated refresh to update charges only when zoom change stops
-			viz.refresh(tickSimulation)
+			viz.refresh(false)
+			if (scaleChanged) {
+				// refreshCharges()
+			}
 		}
 		
 		viz.transform = D3.zoomIdentity
@@ -168,7 +169,6 @@ export default class DNGViz implements DNGVizAPI {
 		this.scene.call(viz.zoom as any)
 	}
 	
-	// TODO
 	private centerCameraOnSelection(position: PositionXY) {
 		if (this.selection) {
 			let { x, y } = this.selection
