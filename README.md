@@ -1,7 +1,7 @@
 ## D3 Network Graph - Damocles
 
 ### Instalation
-In this branch of the repo you can find the [minified file](https://github.com/snolflake/damocles-network-graph/blob/gh-pages/dng-viz.min.js)
+In this branch of the repo you can find the [minified file](https://github.com/samuelgoujon/cartographie/blob/gh-pages/dng-viz.min.js)
 ready to be included on your on page.
 
 ### Usage
@@ -33,10 +33,10 @@ window.onresize = refresh
 ```
 
 ### Options
-Some configuration options are available for the component. You can see all the 
-**[default values](https://github.com/snolflake/damocles-network-graph/blob/master/default-options.json)**
+Some configuration options are available for the component. You can see all the
+**[default values](https://github.com/samuelgoujon/cartographie/blob/master/default-options.json)**
 and override them on the component initialization.
 
 ### Source Code
-The source can be found on [master branch](https://github.com/snolflake/damocles-network-graph/tree/master).
-Fell free to ask for assistence to modify or revuild the component if needed.
+The source can be found on [master branch](https://github.com/samuelgoujon/cartographie/tree/master).
+Fell free to ask for assistance to modify or rebuild the component if needed.
