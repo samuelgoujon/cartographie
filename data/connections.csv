@@ -1,155 +1,166 @@
-source,target,type
-1,141,solid
-3,116,solid
-3,140,solid
-4,140,solid
-5,119,solid
-5,138,solid
-5,139,solid
-5,145,dotted
-6,140,solid
-8,138,dotted
-3,123,solid
-10,122,solid
-10,140,solid
-11,118,solid
-11,142,dotted
-12,118,solid
-13,116,solid
-14,118,solid
-15,140,solid
-16,137,solid
-17,140,solid
-17,142,solid
-18,110,solid
-18,118,solid
-19,138,dotted
-19,139,solid
-20,122,solid
-20,140,solid
-21,140,solid
-21,145,dotted
-22,121,dotted
-23,140,solid
-24,140,solid
-25,141,solid
-26,141,solid
-27,116,solid
-27,118,solid
-28,109,solid
-28,118,solid
-29,125,solid
-31,116,solid
-31,140,solid
-32,140,solid
-34,115,solid
-34,122,solid
-34,137,solid
-34,140,solid
-34,142,solid
-34,145,dotted
-35,118,solid
-36,121,dotted
-37,121,solid
-38,140,solid
-39,136,solid
-40,116,solid
-40,140,dotted
-41,140,solid
-42,137,dotted
-42,140,solid
-44,109,solid
-44,118,solid
-46,112,solid
-47,116,solid
-48,122,solid
-48,140,solid
-50,140,solid
-50,142,dotted
-50,145,dotted
-51,140,solid
-52,132,solid
-52,140,solid
-53,140,solid
-54,140,solid
-55,140,solid
-56,116,solid
-56,138,solid
-57,133,solid
-58,125,dotted
-58,131,solid
-59,118,solid
-60,140,solid
-60,145,dotted
-61,128,dotted
-61,138,dotted
-62,115,solid
-62,147,dotted
-63,115,solid
-63,147,dotted
-64,133,solid
-64,140,solid
-65,137,solid
-65,138,dotted
-66,140,solid
-67,140,solid
-68,140,solid
-69,136,solid
-70,140,solid
-71,140,solid
-71,142,solid
-72,116,solid
-72,140,dotted
-73,118,solid
-74,141,dotted
-75,140,solid
-75,143,solid
-77,136,solid
-79,121,solid
-80,140,solid
-81,138,dotted
-81,140,dotted
-82,140,solid
-83,122,solid
-83,138,dotted
-83,139,solid
-83,140,dotted
-84,140,solid
-85,120,solid
-85,140,solid
-86,140,solid
-86,144,solid
-87,118,solid
-87,122,solid
-88,128,dotted
-88,135,solid
-89,137,solid
-90,121,dotted
-91,122,solid
-91,140,solid
-92,134,dotted
-92,140,solid
-92,142,solid
-93,116,solid
-93,140,solid
-94,121,solid
-94,141,dotted
-95,140,solid
-96,140,solid
-97,142,solid
-98,136,solid
-98,145,solid
-99,115,solid
-99,140,solid
-100,140,solid
-101,114,solid
-102,140,solid
-103,111,dotted
-103,141,dotted
-104,140,solid
-105,122,solid
-105,132,dotted
-105,134,dotted
-105,140,solid
-105,145,dotted
-107,118,solid
+source,target,type,vlookup source,vlookup target
+1,140,solid,Sophia Aram,Radio France
+3,115,solid,Jacques Attali,En Marche !
+3,139,solid,Jacques Attali,Parti socialiste
+4,139,solid,Martine Aubry,Parti socialiste
+5,118,solid,Clémentine Autain,Fondation Copernic
+5,138,solid,Clémentine Autain,Parti de gauche
+5,138,solid,Clémentine Autain,Parti de gauche
+5,144,dotted,Clémentine Autain,UNEF
+6,139,solid,Jean-Marc Ayrault,Parti socialiste
+8,137,dotted,Étienne Balibar,Parti communiste français
+3,122,solid,Jacques Attali,L'Express
+10,121,solid,Claude Bartolone,Grand Orient de France
+10,139,solid,Claude Bartolone,Parti socialiste
+11,117,solid,Delphine Batho,Europe Écologie Les Verts
+11,141,dotted,Delphine Batho,SOS Racisme
+12,117,solid,Denis Baupin,Europe Écologie Les Verts
+13,115,solid,François Bayrou,En Marche !
+14,117,solid,Esther Benbassa,Europe Écologie Les Verts
+15,139,solid,Pierre Bergé,Parti socialiste
+16,136,solid,Olivier Besancenot,Nouveau Parti anticapitaliste
+17,139,solid,Malek Boutih,Parti socialiste
+17,141,solid,Malek Boutih,SOS Racisme
+18,109,solid,José Bové,ATTAC
+18,117,solid,José Bové,Europe Écologie Les Verts
+19,137,dotted,Patrick Braouezec,Parti communiste français
+19,138,solid,Patrick Braouezec,Parti de gauche
+20,121,solid,Jérôme Cahuzac,Grand Orient de France
+20,139,solid,Jérôme Cahuzac,Parti socialiste
+21,139,solid,Jean-Christophe Cambadélis,Parti socialiste
+21,144,dotted,Jean-Christophe Cambadélis,UNEF
+22,120,dotted,Aymeric Caron,France Télévisions
+23,139,solid,Bernard Cazeneuve,Parti socialiste
+24,139,solid,Jean-Pierre Chevènement,Parti socialiste
+25,140,solid,Pascale Clark,Radio France
+26,140,solid,Patrick Cohen,Radio France
+27,117,solid,Daniel Cohn-Bendit,Europe Écologie Les Verts
+27,117,solid,Daniel Cohn-Bendit,Europe Écologie Les Verts
+28,108,solid,Emmanuelle Cosse,Act Up-Paris
+28,117,solid,Emmanuelle Cosse,Europe Écologie Les Verts
+29,124,solid,Jean Daniel,L'Obs
+31,115,solid,Bertrand Delanoë,En Marche !
+31,139,solid,Bertrand Delanoë,Parti socialiste
+32,139,solid,Jacques Delors,Parti socialiste
+34,114,solid,Julien Dray,CRIF
+34,121,solid,Julien Dray,Grand Orient de France
+34,136,solid,Julien Dray,Nouveau Parti anticapitaliste
+34,139,solid,Julien Dray,Parti socialiste
+34,141,solid,Julien Dray,SOS Racisme
+34,144,dotted,Julien Dray,UNEF
+35,117,solid,Cécile Duflot,Europe Écologie Les Verts
+36,120,dotted,Ruth Elkrief,France Télévisions
+37,120,solid,Delphine Ernotte,France Télévisions
+38,139,solid,Laurent Fabius,Parti socialiste
+39,135,solid,Éric Fassin,Ministère de l'Éducation nationale
+40,115,solid,Richard Ferrand,En Marche !
+40,139,dotted,Richard Ferrand,Parti socialiste
+41,138,solid,Aurélie Filippetti,Parti de gauche
+42,136,dotted,Gérard Filoche,Nouveau Parti anticapitaliste
+42,139,solid,Gérard Filoche,Parti socialiste
+44,108,solid,Christophe Girard,Act Up-Paris
+44,117,solid,Christophe Girard,Europe Écologie Les Verts
+46,111,solid,Nicolas Gougain,CNCDH
+47,115,solid,Sylvie Goulard,En Marche !
+48,121,solid,Élisabeth Guigou,Grand Orient de France
+48,139,solid,Élisabeth Guigou,Parti socialiste
+50,139,solid,Benoît Hamon,Parti socialiste
+50,141,dotted,Benoît Hamon,SOS Racisme
+50,144,dotted,Benoît Hamon,UNEF
+51,139,solid,Adeline Hazan,Parti socialiste
+52,131,dotted,Anne Hidalgo,Ligue des droits de l'Homme
+52,139,solid,Anne Hidalgo,Parti socialiste
+53,139,solid,Martin Hirsch,Parti socialiste
+54,139,solid,François Hollande,Parti socialiste
+55,138,solid,Jean-Paul Huchon,Parti de gauche
+56,115,solid,Robert Hue,En Marche !
+56,137,solid,Robert Hue,Parti communiste français
+57,132,solid,Alain Jakubowicz,LICRA
+58,124,dotted,Laurent Joffrin,L'Obs
+58,130,solid,Laurent Joffrin,Libération
+59,117,solid,Eva Joly,Europe Écologie Les Verts
+60,139,solid,Lionel Jospin,Parti socialiste
+60,144,dotted,Lionel Jospin,UNEF
+61,127,dotted,Jean-François Kahn,Le Monde
+61,137,dotted,Jean-François Kahn,Parti communiste français
+62,114,solid,Arno Klarsfeld,CRIF
+62,146,dotted,Arno Klarsfeld,UEJF
+63,114,solid,Patrick Klugman,CRIF
+63,146,dotted,Patrick Klugman,UEJF
+64,132,dotted,Bernard Kouchner,LICRA
+64,139,solid,Bernard Kouchner,Parti socialiste
+65,136,solid,Alain Krivine,Nouveau Parti anticapitaliste
+65,137,dotted,Alain Krivine,Parti communiste français
+66,139,solid,Pascal Lamy,Parti socialiste
+67,139,solid,Jack Lang,Parti socialiste
+68,139,solid,Anne Lauvergeon,Parti socialiste
+69,135,solid,Hervé Le Bras,Ministère de l'Éducation nationale
+70,139,solid,Marie-Noëlle Lienemann,Parti socialiste
+71,139,solid,Bernard-Henri Lévy,Parti socialiste
+71,141,solid,Bernard-Henri Lévy,SOS Racisme
+72,115,solid,Emmanuel Macron,En Marche !
+72,139,dotted,Emmanuel Macron,Parti socialiste
+73,117,solid,Noël Mamère,Europe Écologie Les Verts
+73,140,dotted,Noël Mamère,Radio France
+75,139,solid,Jean-Pierre Michel,Parti socialiste
+75,142,solid,Jean-Pierre Michel,Syndicat de la magistrature
+77,135,solid,Frédéric Mion,Ministère de l'Éducation nationale
+79,120,solid,Yann Moix,France Télévisions
+80,139,solid,Arnaud Montebourg,Parti socialiste
+81,137,dotted,Edgar Morin,Parti communiste français
+81,139,dotted,Edgar Morin,Parti socialiste
+82,139,solid,Pierre Moscovici,Parti socialiste
+83,121,solid,Jean-Luc Mélenchon,Grand Orient de France
+83,137,dotted,Jean-Luc Mélenchon,Parti communiste français
+83,138,solid,Jean-Luc Mélenchon,Parti de gauche
+83,139,dotted,Jean-Luc Mélenchon,Parti socialiste
+84,139,solid,Vincent Peillon,Parti socialiste
+85,119,solid,Matthieu Pigasse,Fondation Jean-Jaurès
+85,139,solid,Matthieu Pigasse,Parti socialiste
+86,139,solid,Thomas Piketty,Parti socialiste
+86,143,solid,Thomas Piketty,Terra Nova
+87,117,solid,Jean-Vincent Placé,Europe Écologie Les Verts
+87,121,solid,Jean-Vincent Placé,Grand Orient de France
+88,127,dotted,Edwy Plenel,Le Monde
+88,134,solid,Edwy Plenel,Mediapart
+89,136,solid,Philippe Poutou,Nouveau Parti anticapitaliste
+90,120,dotted,Audrey Pulvar,France Télévisions
+91,121,solid,François Rebsamen,Grand Orient de France
+91,139,solid,François Rebsamen,Parti socialiste
+92,133,dotted,Laurence Rossignol,LMDE
+92,139,solid,Laurence Rossignol,Parti socialiste
+92,141,dotted,Laurence Rossignol,SOS Racisme
+93,115,solid,Ségolène Royal,En Marche !
+93,139,solid,Ségolène Royal,Parti socialiste
+94,120,solid,Laurent Ruquier,France Télévisions
+94,140,dotted,Laurent Ruquier,Radio France
+95,139,solid,Michel Sapin,Parti socialiste
+96,139,solid,Louis Schweitzer,Parti socialiste
+97,141,solid,Dominique Sopo,SOS Racisme
+97,135,solid,Dominique Sopo,Ministère de l'Éducation nationale
+98,135,solid,Benjamin Stora,Ministère de l'Éducation nationale
+98,144,dotted,Benjamin Stora,UNEF
+99,114,solid,Dominique Strauss-Kahn,CRIF
+99,139,solid,Dominique Strauss-Kahn,Parti socialiste
+100,139,solid,Christiane Taubira,Parti socialiste
+101,113,solid,Louis-Georges Tin,CRAN
+102,139,solid,Marisol Touraine,Parti socialiste
+103,139,dotted,Philippe Val,Parti socialiste
+103,140,dotted,Philippe Val,Radio France
+104,139,solid,Najat Vallaud-Belkacem,Parti socialiste
+105,121,solid,Manuel Valls,Grand Orient de France
+105,131,dotted,Manuel Valls,Ligue des droits de l'Homme
+105,133,dotted,Manuel Valls,LMDE
+105,139,solid,Manuel Valls,Parti socialiste
+105,144,dotted,Manuel Valls,UNEF
+107,117,solid,Dominique Voynet,Europe Écologie Les Verts
+147,139,dotted,Christophe Castaner,Parti socialiste
+147,115,solid,Christophe Castaner,En Marche !
+148,115,solid,Marlène Schiappa,En Marche !
+149,115,solid,Jean-Paul Delevoye,En Marche !
+30,144,dotted,Caroline De Haas,UNEF
+30,139,dotted,Caroline De Haas,Parti socialiste
+30,117,solid,Caroline De Haas,Europe Écologie Les Verts
+26,144,dotted,Patrick Cohen,UNEF
+61,150,solid,Jean-François Kahn,Marianne
+46,151,solid,Nicolas Gougain,Inter-LGBT
