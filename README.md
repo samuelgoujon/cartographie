@@ -1,4 +1,4 @@
-## D3 Network Graph - Damocles
+## Cartographie — Damoclès
 
 ### Instalation
 In this branch of the repo you can find the [minified file](https://github.com/samuelgoujon/cartographie/blob/gh-pages/dng-viz.min.js)
