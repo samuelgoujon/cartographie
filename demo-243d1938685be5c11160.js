@@ -107,7 +107,7 @@ var viz;
 function init() {
 	var container = document.querySelector('div#demo-target');
 	var options = {
-		dataPath: 'data/'
+		dataPath: 'data'
 	};
 
 	viz = new DNGViz(container, options);
