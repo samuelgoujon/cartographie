@@ -11,17 +11,17 @@ source,target,type,vlookup source,vlookup target
 8,137,dotted,Étienne Balibar,Parti communiste français
 3,122,solid,Jacques Attali,L'Express
 10,139,solid,Claude Bartolone,Parti socialiste
-11,117,solid,Delphine Batho,Europe Écologie Les Verts
+30,117,solid,Caroline De Haas,Europe Écologie Les Verts
 11,141,dotted,Delphine Batho,SOS Racisme
-12,117,solid,Denis Baupin,Europe Écologie Les Verts
+35,117,solid,Cécile Duflot,Europe Écologie Les Verts
 13,115,solid,François Bayrou,La République en marche !
-14,117,solid,Esther Benbassa,Europe Écologie Les Verts
+44,117,solid,Christophe Girard,Europe Écologie Les Verts
 15,139,solid,Pierre Bergé,Parti socialiste
 16,136,solid,Olivier Besancenot,Nouveau Parti anticapitaliste
 17,139,solid,Malek Boutih,Parti socialiste
 17,141,solid,Malek Boutih,SOS Racisme
 18,109,solid,José Bové,ATTAC
-18,117,solid,José Bové,Europe Écologie Les Verts
+27,117,solid,Daniel Cohn-Bendit,Europe Écologie Les Verts
 19,137,dotted,Patrick Braouezec,Parti communiste français
 19,138,solid,Patrick Braouezec,Parti de gauche
 21,139,solid,Jean-Christophe Cambadélis,Parti socialiste
@@ -31,9 +31,9 @@ source,target,type,vlookup source,vlookup target
 24,139,solid,Jean-Pierre Chevènement,Parti socialiste
 25,140,solid,Pascale Clark,Radio France
 26,140,solid,Patrick Cohen,Radio France
-27,117,solid,Daniel Cohn-Bendit,Europe Écologie Les Verts
+11,117,solid,Delphine Batho,Europe Écologie Les Verts
 28,108,solid,Emmanuelle Cosse,Act Up-Paris
-28,117,solid,Emmanuelle Cosse,Europe Écologie Les Verts
+12,117,solid,Denis Baupin,Europe Écologie Les Verts
 29,124,solid,Jean Daniel,L'Obs
 31,115,solid,Bertrand Delanoë,La République en marche !
 31,139,solid,Bertrand Delanoë,Parti socialiste
@@ -43,7 +43,7 @@ source,target,type,vlookup source,vlookup target
 34,139,solid,Julien Dray,Parti socialiste
 34,141,solid,Julien Dray,SOS Racisme
 34,144,dotted,Julien Dray,UNEF
-35,117,solid,Cécile Duflot,Europe Écologie Les Verts
+28,117,solid,Emmanuelle Cosse,Europe Écologie Les Verts
 36,120,dotted,Ruth Elkrief,France Télévisions
 37,120,solid,Delphine Ernotte,France Télévisions
 38,139,solid,Laurent Fabius,Parti socialiste
@@ -54,7 +54,7 @@ source,target,type,vlookup source,vlookup target
 42,136,dotted,Gérard Filoche,Nouveau Parti anticapitaliste
 42,139,solid,Gérard Filoche,Parti socialiste
 44,108,solid,Christophe Girard,Act Up-Paris
-44,117,solid,Christophe Girard,Europe Écologie Les Verts
+14,117,solid,Esther Benbassa,Europe Écologie Les Verts
 46,111,solid,Nicolas Gougain,CNCDH
 47,115,solid,Sylvie Goulard,La République en marche !
 48,139,solid,Élisabeth Guigou,Parti socialiste
@@ -93,7 +93,6 @@ source,target,type,vlookup source,vlookup target
 71,141,solid,Bernard-Henri Lévy,SOS Racisme
 72,115,solid,Emmanuel Macron,La République en marche !
 72,139,dotted,Emmanuel Macron,Parti socialiste
-73,117,solid,Noël Mamère,Europe Écologie Les Verts
 73,140,dotted,Noël Mamère,Radio France
 75,139,solid,Jean-Pierre Michel,Parti socialiste
 75,142,solid,Jean-Pierre Michel,Syndicat de la magistrature
@@ -142,14 +141,14 @@ source,target,type,vlookup source,vlookup target
 105,133,dotted,Manuel Valls,LMDE
 105,139,solid,Manuel Valls,Parti socialiste
 105,144,dotted,Manuel Valls,UNEF
-107,117,solid,Fiammetta Venner,Europe Écologie Les Verts
+18,117,solid,José Bové,Europe Écologie Les Verts
 147,139,dotted,Christophe Castaner,Parti socialiste
 147,115,solid,Christophe Castaner,La République en marche !
 148,115,solid,Marlène Schiappa,La République en marche !
 149,115,solid,Jean-Paul Delevoye,La République en marche !
 30,144,dotted,Caroline De Haas,UNEF
 30,139,dotted,Caroline De Haas,Parti socialiste
-30,117,solid,Caroline De Haas,Europe Écologie Les Verts
+73,117,solid,Noël Mamère,Europe Écologie Les Verts
 26,144,dotted,Patrick Cohen,UNEF
 61,150,solid,Jean-François Kahn,Marianne
 46,151,solid,Nicolas Gougain,Inter-LGBT
