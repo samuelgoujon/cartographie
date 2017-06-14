@@ -10,7 +10,6 @@ source,target,type,vlookup source,vlookup target
 6,139,solid,Jean-Marc Ayrault,Parti socialiste
 8,137,dotted,Étienne Balibar,Parti communiste français
 3,122,solid,Jacques Attali,L'Express
-10,121,solid,Claude Bartolone,France Télévisions
 10,139,solid,Claude Bartolone,Parti socialiste
 11,117,solid,Delphine Batho,Europe Écologie Les Verts
 11,141,dotted,Delphine Batho,SOS Racisme
@@ -41,7 +40,6 @@ source,target,type,vlookup source,vlookup target
 31,139,solid,Bertrand Delanoë,Parti socialiste
 32,139,solid,Jacques Delors,Parti socialiste
 34,114,solid,Julien Dray,CRIF
-34,121,solid,Julien Dray,France Télévisions
 34,136,solid,Julien Dray,Nouveau Parti anticapitaliste
 34,139,solid,Julien Dray,Parti socialiste
 34,141,solid,Julien Dray,SOS Racisme
@@ -60,7 +58,6 @@ source,target,type,vlookup source,vlookup target
 44,117,solid,Christophe Girard,Europe Écologie Les Verts
 46,111,solid,Nicolas Gougain,CNCDH
 47,115,solid,Sylvie Goulard,La République en marche !
-48,121,solid,Élisabeth Guigou,France Télévisions
 48,139,solid,Élisabeth Guigou,Parti socialiste
 50,139,solid,Benoît Hamon,Parti socialiste
 50,141,dotted,Benoît Hamon,SOS Racisme
@@ -107,7 +104,6 @@ source,target,type,vlookup source,vlookup target
 81,137,dotted,Edgar Morin,Parti communiste français
 81,139,dotted,Edgar Morin,Parti socialiste
 82,139,solid,Pierre Moscovici,Parti socialiste
-83,121,solid,Jean-Luc Mélenchon,France Télévisions
 83,137,dotted,Jean-Luc Mélenchon,Parti communiste français
 83,138,solid,Jean-Luc Mélenchon,Parti de gauche
 83,139,dotted,Jean-Luc Mélenchon,Parti socialiste
@@ -117,12 +113,10 @@ source,target,type,vlookup source,vlookup target
 86,139,solid,Thomas Piketty,Parti socialiste
 86,143,solid,Thomas Piketty,Terra Nova
 87,117,solid,Jean-Vincent Placé,Europe Écologie Les Verts
-87,121,solid,Jean-Vincent Placé,France Télévisions
 88,127,dotted,Edwy Plenel,Le Monde
 88,134,solid,Edwy Plenel,Mediapart
 89,136,solid,Philippe Poutou,Nouveau Parti anticapitaliste
 90,120,dotted,Audrey Pulvar,France Télévisions
-91,121,solid,François Rebsamen,France Télévisions
 91,139,solid,François Rebsamen,Parti socialiste
 92,133,dotted,Laurence Rossignol,LMDE
 92,139,solid,Laurence Rossignol,Parti socialiste
@@ -145,12 +139,11 @@ source,target,type,vlookup source,vlookup target
 103,139,dotted,Philippe Val,Parti socialiste
 103,140,dotted,Philippe Val,Radio France
 104,139,solid,Najat Vallaud-Belkacem,Parti socialiste
-105,121,solid,Manuel Valls,France Télévisions
 105,131,dotted,Manuel Valls,Ligue des droits de l'Homme
 105,133,dotted,Manuel Valls,LMDE
 105,139,solid,Manuel Valls,Parti socialiste
 105,144,dotted,Manuel Valls,UNEF
-107,117,solid,Dominique Voynet,Europe Écologie Les Verts
+107,117,solid,Fiammetta Venner,Europe Écologie Les Verts
 147,139,dotted,Christophe Castaner,Parti socialiste
 147,115,solid,Christophe Castaner,La République en marche !
 148,115,solid,Marlène Schiappa,La République en marche !
@@ -162,27 +155,6 @@ source,target,type,vlookup source,vlookup target
 61,150,solid,Jean-François Kahn,Marianne
 46,151,solid,Nicolas Gougain,Inter-LGBT
 74,140,dotted,Daniel Mermet,Radio France
-66,153,solid,Pascal Lamy,French-American Foundation
-76,153,solid,Alain Minc,French-American Foundation
-99,153,solid,Dominique Strauss-Kahn,French-American Foundation
-3,153,solid,Jacques Attali,French-American Foundation
-58,153,solid,Laurent Joffrin,French-American Foundation
-155,153,solid,French-American Foundation,French-American Foundation
-4,153,solid,Martine Aubry,French-American Foundation
-13,153,solid,François Bayrou,French-American Foundation
-24,153,solid,Jean-Pierre Chevènement,French-American Foundation
-38,153,solid,Laurent Fabius,French-American Foundation
-48,153,solid,Élisabeth Guigou,French-American Foundation
-53,153,solid,Martin Hirsch,French-American Foundation
-54,153,solid,François Hollande,French-American Foundation
-55,153,solid,Jean-Paul Huchon,French-American Foundation
-60,153,solid,Lionel Jospin,French-American Foundation
-64,153,solid,Bernard Kouchner,French-American Foundation
-67,153,solid,Jack Lang,French-American Foundation
-82,153,solid,Pierre Moscovici,French-American Foundation
-105,153,solid,Manuel Valls,French-American Foundation
-102,153,solid,Marisol Touraine,French-American Foundation
-77,153,solid,Frédéric Mion,French-American Foundation
 76,152,solid,Alain Minc,French-American Foundation
 72,152,solid,Emmanuel Macron,French-American Foundation
 54,152,solid,François Hollande,French-American Foundation
