@@ -1,6 +1,6 @@
 source,target,type,vlookup source,vlookup target
 1,140,solid,Sophia Aram,Radio France
-3,115,solid,Jacques Attali,En Marche !
+3,115,solid,Jacques Attali,La République en marche !
 3,139,solid,Jacques Attali,Parti socialiste
 4,139,solid,Martine Aubry,Parti socialiste
 5,118,solid,Clémentine Autain,Fondation Copernic
@@ -10,12 +10,12 @@ source,target,type,vlookup source,vlookup target
 6,139,solid,Jean-Marc Ayrault,Parti socialiste
 8,137,dotted,Étienne Balibar,Parti communiste français
 3,122,solid,Jacques Attali,L'Express
-10,121,solid,Claude Bartolone,Grand Orient de France
+10,121,solid,Claude Bartolone,France Télévisions
 10,139,solid,Claude Bartolone,Parti socialiste
 11,117,solid,Delphine Batho,Europe Écologie Les Verts
 11,141,dotted,Delphine Batho,SOS Racisme
 12,117,solid,Denis Baupin,Europe Écologie Les Verts
-13,115,solid,François Bayrou,En Marche !
+13,115,solid,François Bayrou,La République en marche !
 14,117,solid,Esther Benbassa,Europe Écologie Les Verts
 15,139,solid,Pierre Bergé,Parti socialiste
 16,136,solid,Olivier Besancenot,Nouveau Parti anticapitaliste
@@ -25,8 +25,6 @@ source,target,type,vlookup source,vlookup target
 18,117,solid,José Bové,Europe Écologie Les Verts
 19,137,dotted,Patrick Braouezec,Parti communiste français
 19,138,solid,Patrick Braouezec,Parti de gauche
-20,121,solid,Jérôme Cahuzac,Grand Orient de France
-20,139,solid,Jérôme Cahuzac,Parti socialiste
 21,139,solid,Jean-Christophe Cambadélis,Parti socialiste
 21,144,dotted,Jean-Christophe Cambadélis,UNEF
 22,120,dotted,Aymeric Caron,France Télévisions
@@ -39,11 +37,11 @@ source,target,type,vlookup source,vlookup target
 28,108,solid,Emmanuelle Cosse,Act Up-Paris
 28,117,solid,Emmanuelle Cosse,Europe Écologie Les Verts
 29,124,solid,Jean Daniel,L'Obs
-31,115,solid,Bertrand Delanoë,En Marche !
+31,115,solid,Bertrand Delanoë,La République en marche !
 31,139,solid,Bertrand Delanoë,Parti socialiste
 32,139,solid,Jacques Delors,Parti socialiste
 34,114,solid,Julien Dray,CRIF
-34,121,solid,Julien Dray,Grand Orient de France
+34,121,solid,Julien Dray,France Télévisions
 34,136,solid,Julien Dray,Nouveau Parti anticapitaliste
 34,139,solid,Julien Dray,Parti socialiste
 34,141,solid,Julien Dray,SOS Racisme
@@ -53,27 +51,26 @@ source,target,type,vlookup source,vlookup target
 37,120,solid,Delphine Ernotte,France Télévisions
 38,139,solid,Laurent Fabius,Parti socialiste
 39,135,solid,Éric Fassin,Ministère de l'Éducation nationale
-40,115,solid,Richard Ferrand,En Marche !
+40,115,solid,Richard Ferrand,La République en marche !
 40,139,dotted,Richard Ferrand,Parti socialiste
-41,138,solid,Aurélie Filippetti,Parti de gauche
+41,139,solid,Aurélie Filippetti,Parti socialiste
 42,136,dotted,Gérard Filoche,Nouveau Parti anticapitaliste
 42,139,solid,Gérard Filoche,Parti socialiste
 44,108,solid,Christophe Girard,Act Up-Paris
 44,117,solid,Christophe Girard,Europe Écologie Les Verts
 46,111,solid,Nicolas Gougain,CNCDH
-47,115,solid,Sylvie Goulard,En Marche !
-48,121,solid,Élisabeth Guigou,Grand Orient de France
+47,115,solid,Sylvie Goulard,La République en marche !
+48,121,solid,Élisabeth Guigou,France Télévisions
 48,139,solid,Élisabeth Guigou,Parti socialiste
 50,139,solid,Benoît Hamon,Parti socialiste
 50,141,dotted,Benoît Hamon,SOS Racisme
 50,144,dotted,Benoît Hamon,UNEF
-51,139,solid,Adeline Hazan,Parti socialiste
 52,131,dotted,Anne Hidalgo,Ligue des droits de l'Homme
 52,139,solid,Anne Hidalgo,Parti socialiste
 53,139,solid,Martin Hirsch,Parti socialiste
 54,139,solid,François Hollande,Parti socialiste
 55,138,solid,Jean-Paul Huchon,Parti de gauche
-56,115,solid,Robert Hue,En Marche !
+56,115,solid,Robert Hue,La République en marche !
 56,137,solid,Robert Hue,Parti communiste français
 57,132,solid,Alain Jakubowicz,LICRA
 58,124,dotted,Laurent Joffrin,L'Obs
@@ -98,7 +95,7 @@ source,target,type,vlookup source,vlookup target
 70,139,solid,Marie-Noëlle Lienemann,Parti socialiste
 71,139,solid,Bernard-Henri Lévy,Parti socialiste
 71,141,solid,Bernard-Henri Lévy,SOS Racisme
-72,115,solid,Emmanuel Macron,En Marche !
+72,115,solid,Emmanuel Macron,La République en marche !
 72,139,dotted,Emmanuel Macron,Parti socialiste
 73,117,solid,Noël Mamère,Europe Écologie Les Verts
 73,140,dotted,Noël Mamère,Radio France
@@ -110,7 +107,7 @@ source,target,type,vlookup source,vlookup target
 81,137,dotted,Edgar Morin,Parti communiste français
 81,139,dotted,Edgar Morin,Parti socialiste
 82,139,solid,Pierre Moscovici,Parti socialiste
-83,121,solid,Jean-Luc Mélenchon,Grand Orient de France
+83,121,solid,Jean-Luc Mélenchon,France Télévisions
 83,137,dotted,Jean-Luc Mélenchon,Parti communiste français
 83,138,solid,Jean-Luc Mélenchon,Parti de gauche
 83,139,dotted,Jean-Luc Mélenchon,Parti socialiste
@@ -120,17 +117,17 @@ source,target,type,vlookup source,vlookup target
 86,139,solid,Thomas Piketty,Parti socialiste
 86,143,solid,Thomas Piketty,Terra Nova
 87,117,solid,Jean-Vincent Placé,Europe Écologie Les Verts
-87,121,solid,Jean-Vincent Placé,Grand Orient de France
+87,121,solid,Jean-Vincent Placé,France Télévisions
 88,127,dotted,Edwy Plenel,Le Monde
 88,134,solid,Edwy Plenel,Mediapart
 89,136,solid,Philippe Poutou,Nouveau Parti anticapitaliste
 90,120,dotted,Audrey Pulvar,France Télévisions
-91,121,solid,François Rebsamen,Grand Orient de France
+91,121,solid,François Rebsamen,France Télévisions
 91,139,solid,François Rebsamen,Parti socialiste
 92,133,dotted,Laurence Rossignol,LMDE
 92,139,solid,Laurence Rossignol,Parti socialiste
 92,141,dotted,Laurence Rossignol,SOS Racisme
-93,115,solid,Ségolène Royal,En Marche !
+93,115,solid,Ségolène Royal,La République en marche !
 93,139,solid,Ségolène Royal,Parti socialiste
 94,120,solid,Laurent Ruquier,France Télévisions
 94,140,dotted,Laurent Ruquier,Radio France
@@ -148,16 +145,16 @@ source,target,type,vlookup source,vlookup target
 103,139,dotted,Philippe Val,Parti socialiste
 103,140,dotted,Philippe Val,Radio France
 104,139,solid,Najat Vallaud-Belkacem,Parti socialiste
-105,121,solid,Manuel Valls,Grand Orient de France
+105,121,solid,Manuel Valls,France Télévisions
 105,131,dotted,Manuel Valls,Ligue des droits de l'Homme
 105,133,dotted,Manuel Valls,LMDE
 105,139,solid,Manuel Valls,Parti socialiste
 105,144,dotted,Manuel Valls,UNEF
 107,117,solid,Dominique Voynet,Europe Écologie Les Verts
 147,139,dotted,Christophe Castaner,Parti socialiste
-147,115,solid,Christophe Castaner,En Marche !
-148,115,solid,Marlène Schiappa,En Marche !
-149,115,solid,Jean-Paul Delevoye,En Marche !
+147,115,solid,Christophe Castaner,La République en marche !
+148,115,solid,Marlène Schiappa,La République en marche !
+149,115,solid,Jean-Paul Delevoye,La République en marche !
 30,144,dotted,Caroline De Haas,UNEF
 30,139,dotted,Caroline De Haas,Parti socialiste
 30,117,solid,Caroline De Haas,Europe Écologie Les Verts
@@ -165,28 +162,27 @@ source,target,type,vlookup source,vlookup target
 61,150,solid,Jean-François Kahn,Marianne
 46,151,solid,Nicolas Gougain,Inter-LGBT
 74,140,dotted,Daniel Mermet,Radio France
-66,153,solid,Pascal Lamy,Le Siècle
-76,153,solid,Alain Minc,Le Siècle
-99,153,solid,Dominique Strauss-Kahn,Le Siècle
-3,153,solid,Jacques Attali,Le Siècle
-58,153,solid,Laurent Joffrin,Le Siècle
-154,153,solid,Anne Sinclair,Le Siècle
-155,153,solid,Fadela Amara,Le Siècle
-4,153,solid,Martine Aubry,Le Siècle
-13,153,solid,François Bayrou,Le Siècle
-24,153,solid,Jean-Pierre Chevènement,Le Siècle
-38,153,solid,Laurent Fabius,Le Siècle
-48,153,solid,Élisabeth Guigou,Le Siècle
-53,153,solid,Martin Hirsch,Le Siècle
-54,153,solid,François Hollande,Le Siècle
-55,153,solid,Jean-Paul Huchon,Le Siècle
-60,153,solid,Lionel Jospin,Le Siècle
-64,153,solid,Bernard Kouchner,Le Siècle
-67,153,solid,Jack Lang,Le Siècle
-82,153,solid,Pierre Moscovici,Le Siècle
-105,153,solid,Manuel Valls,Le Siècle
-102,153,solid,Marisol Touraine,Le Siècle
-77,153,solid,Frédéric Mion,Le Siècle
+66,153,solid,Pascal Lamy,French-American Foundation
+76,153,solid,Alain Minc,French-American Foundation
+99,153,solid,Dominique Strauss-Kahn,French-American Foundation
+3,153,solid,Jacques Attali,French-American Foundation
+58,153,solid,Laurent Joffrin,French-American Foundation
+155,153,solid,French-American Foundation,French-American Foundation
+4,153,solid,Martine Aubry,French-American Foundation
+13,153,solid,François Bayrou,French-American Foundation
+24,153,solid,Jean-Pierre Chevènement,French-American Foundation
+38,153,solid,Laurent Fabius,French-American Foundation
+48,153,solid,Élisabeth Guigou,French-American Foundation
+53,153,solid,Martin Hirsch,French-American Foundation
+54,153,solid,François Hollande,French-American Foundation
+55,153,solid,Jean-Paul Huchon,French-American Foundation
+60,153,solid,Lionel Jospin,French-American Foundation
+64,153,solid,Bernard Kouchner,French-American Foundation
+67,153,solid,Jack Lang,French-American Foundation
+82,153,solid,Pierre Moscovici,French-American Foundation
+105,153,solid,Manuel Valls,French-American Foundation
+102,153,solid,Marisol Touraine,French-American Foundation
+77,153,solid,Frédéric Mion,French-American Foundation
 76,152,solid,Alain Minc,French-American Foundation
 72,152,solid,Emmanuel Macron,French-American Foundation
 54,152,solid,François Hollande,French-American Foundation
@@ -198,6 +194,22 @@ source,target,type,vlookup source,vlookup target
 85,152,solid,Matthieu Pigasse,French-American Foundation
 102,152,solid,Marisol Touraine,French-American Foundation
 104,152,solid,Najat Vallaud-Belkacem,French-American Foundation
-156,115,solid,Édouard Philippe,En Marche !
-155,141,dotted,Fadela Amara,SOS Racisme
-155,139,dotted,Fadela Amara,Parti socialiste
+156,115,solid,Édouard Philippe,La République en marche !
+9,122,dotted,Christophe Barbier,L'Express
+103,110,dotted,Philippe Val,Charlie Hebdo
+158,119,dotted,Ismaël Emelien,Fondation Jean-Jaurès
+158,139,dotted,Ismaël Emelien,Parti socialiste
+158,115,solid,Ismaël Emelien,La République en marche !
+32,159,solid,Jacques Delors,Institut Jacques Delors
+32,139,solid,Jacques Delors,Parti socialiste
+66,159,dotted,Pascal Lamy,Institut Jacques Delors
+160,119,solid,Jean-Yves Camus,Fondation Jean-Jaurès
+160,110,dotted,Jean-Yves Camus,Charlie Hebdo
+160,128,dotted,Jean-Yves Camus,Le Monde diplomatique
+161,115,solid,Bruno Le Maire,La République en marche !
+162,115,solid,Marielle de Sarnez,La République en marche !
+163,115,solid,Aurore Bergé,La République en marche !
+165,164,solid,Jean-Pierre Jouyet,Les Gracques
+166,164,solid,Denis Olivennes,Les Gracques
+85,164,solid,Matthieu Pigasse,Les Gracques
+27,164,solid,Daniel Cohn-Bendit,Les Gracques
